@@ -10,12 +10,21 @@ Note: If the number is a multiple of both 3 and 5, only count it once.
 
 def solution(number):
     newArray = []
-    
-    if number==0 or number < 0:
+    if number == 0 or number < 0:
         return 0
     else:
-        for i in range(0,number):
-            if i%3 ==0 or i%5 ==0:
+        for i in range(0, number):
+            if (i % 3) == 0 or (i % 5) == 0:
                 newArray.append(i)
                 
     return sum(newArray)
+
+'''
+or
+'''
+def solution(number):
+    sum = 0
+    for i in range(0, number):
+        if (i % 3) == 0 or (i % 5) == 0:
+            sum += i
+    return sum
